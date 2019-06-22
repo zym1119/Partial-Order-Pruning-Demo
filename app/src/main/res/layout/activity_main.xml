@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CVPR 2019 Demo Video\nPartial Order Pruning"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yiming Zhou"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#6C6C6C" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Model:"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PL1A-Seg(FP32)"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Cityscapes Test mIoU:  "
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="69.1%"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/model"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text=" Model:                                 PL1A-Seg\n Cityscapes Test mIoU:     69.1%"-->
+        <!--android:gravity=""-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:textSize="16sp" />-->
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="#6C6C6C" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="2dp">
+
+        <TableRow android:orientation="vertical">
+
+            <TextView
+                android:layout_width="171dp"
+                android:layout_height="wrap_content"
+                android:text=" Platform:"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Snapdragon 845(CPU)"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text=" Image Resolution:  "
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="384x640"
+                android:textSize="16sp" />
+        </TableRow>
+    </TableLayout>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="20dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:text=" Platform:                            Snapdragon 845\n Image Resolution:             640x384"-->
+        <!--android:gravity="left"-->
+        <!--android:textSize="16sp" />-->
+
+    <ImageView
+        android:id="@+id/input_image"
+        android:layout_width="match_parent"
+        android:layout_height="240sp"
+        android:scaleType="fitCenter"
+        android:padding="1dp"
+        android:background="@drawable/border"/>
+
+
+    <ImageView
+        android:id="@+id/pred_image"
+        android:layout_width="match_parent"
+        android:layout_height="240sp"
+        android:scaleType="fitCenter"
+        android:padding="1dp"
+        android:background="@drawable/border" />
+
+    <TextView
+        android:id="@+id/inf_speed"
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:hint="Inference speed will show here"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="TEST"
+        android:textSize="20sp"/>
+</LinearLayout>
